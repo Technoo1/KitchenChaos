@@ -687,6 +687,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2100360589}
   m_SourcePrefab: {fileID: 100100000, guid: 1c5dda3c7cd3cf742afcade5419faeab, type: 3}
+--- !u!114 &1424023538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -622431386729069593, guid: 71e6bcd1451ae0942bed2f98b3d8732b, type: 3}
+  m_PrefabInstance: {fileID: 1492014896}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ada72be01fcb64ba553dac05f948de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1492014896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1000,6 +1011,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -622431386729069593, guid: 71e6bcd1451ae0942bed2f98b3d8732b, type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -622431386729069593, guid: 71e6bcd1451ae0942bed2f98b3d8732b, type: 3}
+      propertyPath: tomatoPrefab
+      value: 
+      objectReference: {fileID: 5006585840321586698, guid: d8a65899e16789648b9882ce11c19631, type: 3}
+    - target: {fileID: -622431386729069593, guid: 71e6bcd1451ae0942bed2f98b3d8732b, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 9dedd5e1c67bfa540bae82bd3df2a466, type: 2}
+    - target: {fileID: -622431386729069593, guid: 71e6bcd1451ae0942bed2f98b3d8732b, type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 1424023538}
     - target: {fileID: 5720385910325441151, guid: 71e6bcd1451ae0942bed2f98b3d8732b, type: 3}
       propertyPath: m_Name
       value: ClearCounter
