@@ -13,8 +13,6 @@ public class ClearCounter : MonoBehaviour, IKitchenObjectParent
     private KitchenObject kitchenObject;
 
 
-  
-
     public void Interact(Player player)
     {
         if (kitchenObject == null)
