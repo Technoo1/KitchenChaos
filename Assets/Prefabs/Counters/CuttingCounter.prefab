@@ -61,11 +61,41 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7537606244108056568, guid: 306391ed11df9ae43bc09a69b39acad1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7338061132206717219}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5720385910325441151, guid: 306391ed11df9ae43bc09a69b39acad1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6440958720395187078}
   m_SourcePrefab: {fileID: 100100000, guid: 306391ed11df9ae43bc09a69b39acad1, type: 3}
+--- !u!1 &1717560289804325712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5720385910325441151, guid: 306391ed11df9ae43bc09a69b39acad1, type: 3}
+  m_PrefabInstance: {fileID: 6392608255360786735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6440958720395187078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717560289804325712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26dd7a53571058499ee1a84bb2f513b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterTopPoint: {fileID: 5239063091518440461}
+  cuttingRecipeSOArray:
+  - {fileID: 11400000, guid: 5e82d2387810e594aab2cfe3a1831ff0, type: 2}
+  - {fileID: 11400000, guid: 286169811ec6d444eb1ce9749b70e482, type: 2}
+  - {fileID: 11400000, guid: e3a32bd2a031c964391160bc5c032696, type: 2}
 --- !u!4 &3471694391898396375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7537606244108056568, guid: 306391ed11df9ae43bc09a69b39acad1, type: 3}
+  m_PrefabInstance: {fileID: 6392608255360786735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5239063091518440461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1154046618615637282, guid: 306391ed11df9ae43bc09a69b39acad1, type: 3}
   m_PrefabInstance: {fileID: 6392608255360786735}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6514444488266833288
@@ -201,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cef89a7f89c17a489157c02ba545332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 0}
+  baseCounter: {fileID: 6440958720395187078}
   visualGameObjectArray:
   - {fileID: 3028848838582825249}
   - {fileID: 1362219000335406536}
