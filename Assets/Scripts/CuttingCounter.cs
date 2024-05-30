@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,13 @@ using UnityEngine;
 public class CuttingCounter : BaseCounter
 {
 
-    [SerializeField] private CuttingRecipeSO[] cuttingRecipeSOArray;
+    public event EventHandler<OnProgressChangedEventArgs> OnProgressChanged;
+    public class OnProgressChangedEventArgs : EventArgs
+    {
+        public float progressNormalized;
+    }
+
+    private CuttingRecipeSO[] cuttingRecipeSOArray;
 
 
     private int cuttingProgress;
@@ -24,6 +31,13 @@ public class CuttingCounter : BaseCounter
                     //Player carrying something that can be cut
                     player.GetKitchenObject().SetKitchenObjectParent(this);
                     cuttingProgress = 0;
+
+                    CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
+
+                    OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
+                    {
+                        progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
+                    });
                 }
             }
             else
@@ -55,6 +69,11 @@ public class CuttingCounter : BaseCounter
 
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
 
+            OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
+            {
+                progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
+            });
+
             if (cuttingProgress >= cuttingRecipeSO.cuttingProgressMax)
             {
                 KitchenObjectSO outputKitchenObjectSO = GetOutputForInput(GetKitchenObject().GetKitchenObjectSO());
@@ -62,7 +81,7 @@ public class CuttingCounter : BaseCounter
                 GetKitchenObject().DestroySelf();
 
                 KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
-            }
+            } 
         }
     }
 
