@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf18688ab969d248b32e1f048a50dd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dc21a10037aee741b16be775dd5891f, type: 3}
   m_Name: CheeseSlices
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5006585840321586698, guid: 0933c8a6136a608449d01475477db061, type: 3}
+  prefab: {fileID: 1778288183289012027, guid: f445f8f71f353ef4dac4213928b37c32, type: 3}
   sprite: {fileID: 21300000, guid: 549cb4f2b86d1b84d8cd41c1cfde26c8, type: 3}
-  objectName: CheeseSlices
+  objectName: Cheese Slices
